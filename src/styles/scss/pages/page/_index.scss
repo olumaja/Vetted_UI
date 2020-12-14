@@ -26,7 +26,7 @@ header{
   @extend .d-flex;
   @extend .justify-content-between;
   font-weight: 400; 
-  width: 35%; 
+  
 }
 
 .menu-tab{
@@ -65,7 +65,8 @@ header{
 }
 
 .btn-cover{
-  width: 15.56rem; margin: auto;
+  @extend .d-flex; @extend .justify-content-center;
+  width: 50%; margin: auto;
 }
 
 #btn-team{
@@ -74,13 +75,13 @@ header{
 }
 
 .client-container{
-  width: 100%; height: 7.75rem;
+  width: 100%;
 }
 
 .client-wrapper{
-  @extend .d-flex; @extend .flex-wrap;
-  @extend .align-items-center;
-  width: 80%; height: 100%; margin: auto;
+  @extend .d-flex;
+  @extend .align-items-center; @extend .flex-wrap;
+  width: 80%; margin: auto; padding: 51px 0;
 }
 
 .client-label{
@@ -91,6 +92,7 @@ header{
 .client{
   flex: 75%; padding: 0 1.875rem;
   @extend .d-flex; @extend .justify-content-between;
+  @extend .flex-wrap;
 }
 
 .why-decagon{
@@ -99,7 +101,7 @@ header{
 }
 
 .workspace-container{
-  @extend .d-flex; 
+  @extend .d-flex; @extend .flex-wrap;
   width: 80%; margin: auto;
 }
 
@@ -145,12 +147,13 @@ header{
 }
 
 .testimony-container{
-  @extend .d-flex; margin: auto;
-  width: 80%; 
+  @extend .d-flex; @extend .flex-wrap;
+  margin: auto; width: 80%; 
 }
 
 .paystack-coo{
   flex: 45%; background: url(/images/Arinze.svg) no-repeat;
+  background-size: cover; 
   height: 427px; position: relative;
 }
 
@@ -386,3 +389,42 @@ header{
   font-size: 14px;
   margin-top: 10px;
 }
+
+// Media query for mobile responsiveness
+
+@media screen and (max-width: 900px) {
+
+  .navbar{
+    width: 95%;
+  }
+
+  .title{ margin-top: 250px;}
+  .sub-title{margin-bottom: 50px;}
+  #btn-team{
+    height: 50px; width: 247px;
+  }
+  
+  .client-wrapper{
+    width: 95%;
+  }
+  .client-label{margin-bottom: 20px; flex: 100%; text-align: center};
+  .client{
+    flex: 100%; display: flex; justify-content: space-between;
+    padding: 0;
+  }
+  
+  .why-decagon{width: 90%;}
+  .workspace-container{width: 90%;}
+  .workspace-img{flex: 100%}
+  .workspace-img img{display: block; width: 100%; margin: auto;}
+  .workspace-content-wrapper{flex: 100%}
+
+  .testimony{width: 95%;}
+  .paystack-coo{flex: 100%; height: 500px;}
+  .paystack-coo img{top:420px; right: 90px;}
+  .testimony-cover{flex: 100%;}
+
+}
+
+
+
