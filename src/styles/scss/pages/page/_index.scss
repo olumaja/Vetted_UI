@@ -375,12 +375,13 @@ header{
 }
 
 .info-content{
-  font-size: 14px;
+  @extend .d-flex; @extend .align-items-center;
+  font-size: 14px; line-height: 30px;
   margin-top: 10px;
 }
+.info-content img{margin-right: 10px;}
 
 // Media query for mobile responsiveness
-
 @media screen and (max-width: 900px) {
 
   .navbar{
@@ -456,6 +457,11 @@ header{
 
    .footer-header{width: 90%;}
    .footer-contact{width: 95%;}
+   .footer-logo{flex: 25%;}
+   .footer-location{flex: 75%; padding-left: 90px;}
+   .info-header{font-size: 12px;}
+   .info-content{font-size: 12px;}
+   .footer-rights{font-size: 10px;}
 
 }
 
